@@ -5,6 +5,8 @@ public class UserLogin{
   public static void main (String[] args){
     greetUser();
     String username = readUser();
+    checkCase(username);
+    checkLength(username);
   }
 
   public static void greetUser(){
@@ -25,12 +27,20 @@ public class UserLogin{
     return name;
   }
 
-  public static void checkCase(){
+  public static void checkCase(String validate){
     // Check if all cases are met
+    System.out.println("Todo CheckCase on: " + validate);
   }
 
-  public static void checkLength(){
+  public static String checkLength(String validateLength){
     // Check if the length is met
+    if(validateLength.length() >= 5 ){
+      System.out.println("The username " + validateLength + " passed checkLength()");
+    } else {
+      System.out.println("The username " + validateLength + " is not valid");
+    }
+
+    return validateLength;
   }
 
   public static void checkValidty(){
