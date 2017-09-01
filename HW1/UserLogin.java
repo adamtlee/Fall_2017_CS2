@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class UserLogin{
   public static void main (String[] args){
     greetUser();
+    String username = readUser();
   }
 
   public static void greetUser(){
@@ -15,8 +16,13 @@ public class UserLogin{
                         "Have at least 5 characters in length.");
   }
 
-  public static void readUser(){
+  public static String readUser(){
     // Read input from the User
+    Scanner console = new Scanner(System.in);
+    System.out.print("enter a username: ");
+    String name = console.nextLine();
+    System.out.println("This is the username you entered: " + name);
+    return name;
   }
 
   public static void checkCase(){
@@ -31,7 +37,7 @@ public class UserLogin{
     // Check if the user name is valid
   }
 
-  public static void printUser(){
+  public static void printUser(String loginValidity){
     // Notify user if username is valid or not
   }
 
@@ -42,4 +48,5 @@ public class UserLogin{
   public static void printReport(){
     // Write to an output file
   }
+
 }
