@@ -37,7 +37,7 @@ public class UserLogin{
     if(validateLength.length() >= 5 ){
       System.out.println("The username " + validateLength + " passed checkLength()");
     } else {
-      System.out.println("The username " + validateLength + " is not valid");
+      System.out.println("The username " + validateLength + "  is not valid");
     }
 
     return validateLength;
