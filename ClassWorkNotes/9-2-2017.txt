@@ -1,0 +1,34 @@
+class Student {
+  sid int;
+  name String;
+  major String;
+}
+
+Student Fred = new Student('Fred', 42, 'CS');
+Student Barney = new Student('Barney', 99, 'MTH');
+if (Fred == Barney){
+  in Object
+    CompareTo
+}
+
+if (Fred.compareTo(Barney) == 0){
+
+}
+
+public int myCompare(class?){
+  (Student n, Student x) {
+    if(n.name == x.name &&
+    n.sid == x.sid) &&
+    n.major == major) return 0;
+
+    else return -1;
+  }
+}
+
+// HW 3 Tips:
+
+import java.util.*;
+
+ArrayList<object> thing = new ArrayList<object>();
+
+ArrayList<Countries> thing = new ArrayList<Contries>();

@@ -11,9 +11,6 @@ public class UserLogin2{
 
       // ask for username
       String username = readUser();
-
-      Scanner input = new Scanner (System.in);
-
       checkCase(username);
   }
   public static void greetUser(){
@@ -52,7 +49,7 @@ public class UserLogin2{
         System.out.println("Username must contain at least one number.");
         valid = false;
     }
-    String specialChars = "(.*[ ! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' \" , < . > / ?].*)";
+    String specialChars = "(.*[ ! # @ $ ].*)";
     if(!username.matches(specialChars)){
         System.out.println("Username must contain at least one special character.");
         valid = false;
@@ -64,16 +61,6 @@ public class UserLogin2{
     }
     if(valid){
         System.out.println("Username is valid.");
-    }
-  }
-
-  public static void printUser(String LoginValidity){
-    try{
-      PrintWriter writer = new PrintWriter("Output.txt", "UTF-8");
-      writer.println("Login: " + LoginValidity);
-
-    } catch (IOException e){
-      System.out.println("Error: " + e);
     }
   }
 }
