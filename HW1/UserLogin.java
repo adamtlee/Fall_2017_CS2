@@ -1,17 +1,22 @@
 import java.util.*;
-import java.util.Scanner;
 
 public class UserLogin{
-  public static void main (String[] args){
-    greetUser();
-    String username = readUser();
-    checkCase(username);
-    checkLength(username);
-    checkValidty(username);
-  }
+    public static void main(String[] args) {
 
+      // Greet the user
+      greetUser();
+
+      // ask for username
+      String username = readUser();
+
+      Scanner input = new Scanner (System.in);
+
+      checkCase(username);
+      passCheck(username);
+
+  }
   public static void greetUser(){
-    System.out.println("This program validates a user name. \n" +
+    System.out.println("This program validates a username. \n" +
                         "The following requirements must be met: \n" +
                         "Contains at least one special Character(!,#,@,#)\n" +
                         "Contains at least one digit \n" +
@@ -21,56 +26,71 @@ public class UserLogin{
 
   public static String readUser(){
     // Read input from the User
-    Scanner console = new Scanner(System.in);
+    String LoginFromUser;
+    // set up input stream from the keyboard
+    Scanner input = new Scanner(System.in);
     System.out.print("enter a username: ");
-    String name = console.nextLine();
-    System.out.println("This is the username you entered: " + name);
-    return name;
+    LoginFromUser = input.next();
+    System.out.println("This is the username you entered: " + LoginFromUser);
+    return LoginFromUser;
   }
-
-  public static void checkCase(String validate){
-    // Check if all cases are met
-
-    // Make an array of scenarios with special characters, and numbers.
-    System.out.println("Todo CheckCase on: " + validate);
-    if (validate.contains("$")){
-      System.out.println("It has a $");
-    } else {
-      System.out.println("No Special Characters");
+  public static void checkCase(String username){
+    System.out.println("CheckCase Method");
+    boolean valid = true;
+    if(username.length() < 5){
+        System.out.println("Username is not five characters long.");
+        valid = false;
+    }
+    String upperCase = "(.*[A-Z].*)";
+    if(!username.matches(upperCase)){
+        System.out.println("Username must contain at least one capital letter.");
+        valid = false;
+    }
+    String numbers = "(.*[0-9].*)";
+    if(!username.matches(numbers)){
+        System.out.println("Username must contain at least one number.");
+        valid = false;
+    }
+    String specialChars = "(.*[ ! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' \" , < . > / ?].*)";
+    if(!username.matches(specialChars)){
+        System.out.println("Username must contain at least one special character.");
+        valid = false;
+    }
+    String space = "(.*[   ].*)";
+    if(username.matches(space)){
+        System.out.println("Username cannot contain a space.");
+        valid = false;
     }
   }
 
-  public static String checkLength(String validateLength){
-    // Check if the length is met
-    if(validateLength.length() >= 5 ){
-      System.out.println("Pass: The username " + validateLength + " passed checkLength()");
-      return validateLength;
-    } else {
-      System.out.println("Fail: The username " + validateLength + "  is not valid");
-    }
-    return null;
+  public static void passCheck(String username){
+      boolean valid = true;
+      if(username.length() < 5){
+          System.out.println("Username is not five characters long.");
+          valid = false;
+      }
+      String upperCase = "(.*[A-Z].*)";
+      if(!username.matches(upperCase)){
+          System.out.println("Username must contain at least one capital letter.");
+          valid = false;
+      }
+      String numbers = "(.*[0-9].*)";
+      if(!username.matches(numbers)){
+          System.out.println("Username must contain at least one number.");
+          valid = false;
+      }
+      String specialChars = "(.*[ ! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' \" , < . > / ?].*)";
+      if(!username.matches(specialChars)){
+          System.out.println("Username must contain at least one special character.");
+          valid = false;
+      }
+      String space = "(.*[   ].*)";
+      if(username.matches(space)){
+          System.out.println("Username cannot contain a space.");
+          valid = false;
+      }
+      if(valid){
+          System.out.println("Username is valid.");
+      }
   }
-
-  public static void checkValidty(String s){
-    // Check if the user name is valid
-    String specialChars = "[" + "!@#$" +"]";
-    if (s.matches(specialChars)){
-      System.out.println("Pass: The String " + s + " contains a special Character.");
-    } else {
-      System.out.println("Fail: The String " + s + " does not contain any required special characters.");
-    }
-  }
-
-  public static void printUser(String loginValidity){
-    // Notify user if username is valid or not
-  }
-
-  public static void addToReport(){
-    // Concatonate with reports
-  }
-
-  public static void printReport(){
-    // Write to an output file
-  }
-
 }
