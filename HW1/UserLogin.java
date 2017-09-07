@@ -10,9 +10,12 @@ public class UserLogin{
       String username = readUser();
 
       Scanner input = new Scanner (System.in);
+      UserLogin test = new UserLogin(); 
 
-      checkCase(username);
-      passCheck(username);
+      test.checkCase(username);
+      test.passCheck(username);
+      test.checkLength(username);
+      test.checkValidty(); 
 
   }
   public static void greetUser(){
@@ -34,13 +37,10 @@ public class UserLogin{
     System.out.println("This is the username you entered: " + LoginFromUser);
     return LoginFromUser;
   }
+  // check cases 
   public static void checkCase(String username){
     System.out.println("CheckCase Method");
     boolean valid = true;
-    if(username.length() < 5){
-        System.out.println("Username is not five characters long.");
-        valid = false;
-    }
     String upperCase = "(.*[A-Z].*)";
     if(!username.matches(upperCase)){
         System.out.println("Username must contain at least one capital letter.");
@@ -61,6 +61,25 @@ public class UserLogin{
         System.out.println("Username cannot contain a space.");
         valid = false;
     }
+  }
+  
+  public static void checkLength(String username){
+    System.out.println("checkLength Method"); 
+     boolean valid = true; 
+     if(username.length() < 5){
+        System.out.println("Username is not five characters long.");
+        valid = false;
+    }
+  }
+  
+  public static void checkValidty(){ 
+    if(checkCase()){
+      System.out.println("True from checkValidity method"); 
+    } else { 
+    
+      System.out.println("Denied from checkValidity"); 
+    }
+    
   }
 
   public static void passCheck(String username){
