@@ -29,6 +29,20 @@ public int myCompare(class?){
 
 import java.util.*;
 
-ArrayList<object> thing = new ArrayList<object>();
+class Test {
+  class Countries {
+    countryName String;
+  }
+  ArrayList<object> thing = new ArrayList<object>();
 
-ArrayList<Countries> thing = new ArrayList<Contries>();
+  ArrayList<Countries> thing = new ArrayList<Contries>();
+
+  thing.countryName = 'Germany'; // won't work
+
+  thing.add("Germany");
+
+  thing.add(0,"France");
+
+  thing.add(99, "Italy");
+
+}

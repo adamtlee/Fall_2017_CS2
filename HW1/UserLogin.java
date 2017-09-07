@@ -7,7 +7,6 @@ public class UserLogin{
 
       // Greet the user
       greetUser();
-
       // ask for username
       String username = readUser();
       // Create Instance Object
@@ -15,10 +14,12 @@ public class UserLogin{
       // Method Calls
       test.checkCase(username);
       test.checkLength(username);
+      test.printUser(username);
       test.printReport(username);
       // test.checkValidty();
 
   }
+
   // Prompt User with directions
   public static void greetUser(){
     System.out.println("This program validates a username. \n" +
@@ -28,6 +29,7 @@ public class UserLogin{
                         "Contains at least one uppercase letter \n" +
                         "Have at least 5 characters in length.");
   }
+
   // Take Username from the User
   public static String readUser(){
     // Read input from the User
@@ -44,33 +46,40 @@ public class UserLogin{
   public static void checkCase(String username){
     // Check the Username for an Uppercase Letter
     boolean valid = true;
+
     String upperCase = "(.*[A-Z].*)";
     if(!username.matches(upperCase)){
         System.out.println("Username must contain at least one capital letter.");
         valid = false;
     }
+
     // Check the Username for a Number
     String numbers = "(.*[0-9].*)";
     if(!username.matches(numbers)){
         System.out.println("Username must contain at least one number.");
         valid = false;
     }
+
     // Check the Username for the special Characters
     String specialChars = "(.*[ ! # @ $ ].*)";
     if(!username.matches(specialChars)){
         System.out.println("Username must contain at least one special character.");
         valid = false;
     }
+
     // Check the Username for no blank space
     String space = "(.*[   ].*)";
     if(username.matches(space)){
         System.out.println("Username cannot contain a space.");
         valid = false;
     }
+
     if(valid){
       System.out.println("Username Passed checkCase");
     }
+
   }
+
   // Check the Length of the Username > 5
   public static void checkLength(String username){
      boolean valid = true;
@@ -82,6 +91,7 @@ public class UserLogin{
       System.out.println("Username Passed checkLength");
     }
   }
+
   // Prompt User if Username is Valid or Not
   public static void checkValidty(boolean valid){
     if(valid){
@@ -91,12 +101,24 @@ public class UserLogin{
     }
   }
 
+  // Print Information to Console
+  public static void printUser(String LoginValidity){
+    System.out.println("Login: " + LoginValidity);
+
+  }
+
+  // Add to Report?
+  public static void addToReport(){
+
+  }
+
+  // Write to an output file
   public static void printReport(String username) throws IOException {
     final String OUTPUT_FILE = "output.txt";
     FileWriter output = new FileWriter(OUTPUT_FILE);
     PrintWriter outputFile = new PrintWriter(output);
     output.write("Login: " + username);
-
     output.close();
   }
+
 }
