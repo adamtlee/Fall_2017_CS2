@@ -104,12 +104,12 @@ public class UserLogin{
   // Print Information to Console
   public static void printUser(String LoginValidity){
     System.out.println("Login: " + LoginValidity);
-
+    System.out.println(""); 
   }
 
   // Add to Report?
   public static void addToReport(){
-
+    // Todo
   }
 
   // Write to an output file
