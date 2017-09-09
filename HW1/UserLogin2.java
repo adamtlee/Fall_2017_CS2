@@ -33,7 +33,6 @@ public class UserLogin2{
     return LoginFromUser;
   }
   public static void checkCase(String username){
-    System.out.println("CheckCase Method");
     boolean valid = true;
     if(username.length() < 5){
         System.out.println("Username is not five characters long.");
