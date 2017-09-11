@@ -6,5 +6,6 @@ public class Countries {
   int countryArea;
   int countryPopulation;
   double countryGDP;
-  int countryYear; 
+  int countryYear;
 }
+  
