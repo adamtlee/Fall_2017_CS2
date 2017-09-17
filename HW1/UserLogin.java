@@ -4,6 +4,8 @@ import java.io.*;
 
 public class UserLogin{
     public static void main(String[] args) throws IOException{
+      String fileName = "output.txt";
+      BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
 
       // Greet the user
       greetUser();
@@ -15,7 +17,7 @@ public class UserLogin{
       test.checkCase(username);
       test.checkLength(username);
       test.printUser(username);
-      test.printReport(username);
+      test.printReport(username, fileName, writer);
       // test.checkValidty();
 
   }
@@ -104,7 +106,7 @@ public class UserLogin{
   // Print Information to Console
   public static void printUser(String LoginValidity){
     System.out.println("Login: " + LoginValidity);
-    System.out.println(""); 
+    System.out.println("");
   }
 
   // Add to Report?
