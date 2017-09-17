@@ -1,5 +1,0 @@
-Username is not five characters long.
-Username must contain at least one capital letter.
-Username must contain at least one number.
-Username must contain at least one special character.
-Username is not valid

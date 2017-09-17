@@ -10,8 +10,6 @@ public class HW2 {
 
     HW2 object = new HW2();
 
-
-
     System.out.print("Enter a text file: ");
     System.out.flush();
     String input = user_input.nextLine().trim();

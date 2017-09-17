@@ -17,7 +17,7 @@ public class UserLogin{
       test.checkCase(username);
       test.checkLength(username);
       test.printUser(username);
-      test.printReport(username, fileName, writer);
+      // test.printReport(username, fileName, writer);
       // test.checkValidty();
 
   }
@@ -34,14 +34,26 @@ public class UserLogin{
 
   // Take Username from the User
   public static String readUser(){
+    String s;
     // Read input from the User
     String LoginFromUser;
+    ArrayList<String> usernames = new ArrayList<String>();
     // set up input stream from the keyboard
     Scanner input = new Scanner(System.in);
-    System.out.print("enter a username: ");
-    LoginFromUser = input.next();
-    System.out.println("This is the username you entered: " + LoginFromUser);
-    return LoginFromUser;
+    while(true){
+      s = input.next();
+      if (s.equals("exit")){
+        break;
+      } else {
+        usernames.add(s);
+      }
+      System.out.println(usernames + "\n");
+      //input.close();
+    }
+
+    return s;
+    //System.out.println("This is the username you entered: " + LoginFromUser);
+    //return LoginFromUser;
   }
 
   // Check cases
@@ -113,14 +125,15 @@ public class UserLogin{
   public static void addToReport(){
     // Todo
   }
-
+  /*
   // Write to an output file
-  public static void printReport(String username) throws IOException {
+  public static void printReport(String username, String fileName, FileWriter output) throws IOException {
     final String OUTPUT_FILE = "output.txt";
     FileWriter output = new FileWriter(OUTPUT_FILE);
     PrintWriter outputFile = new PrintWriter(output);
     output.write("Login: " + username);
     output.close();
   }
+  */
 
 }
