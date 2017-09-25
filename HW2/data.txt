@@ -1,1 +1,111 @@
 This will store the data for countries
+
+Country Name: Germany
+
+latitude: NA
+
+Longitude: NA
+
+Country Area: 357,022 sq km
+
+Country Population: 80,594,017
+
+Country GDP: $3.98 trillion
+
+Country Year: NA
+
+*
+
+Country Name: Netherlands
+
+latitude: NA
+
+Longitude: NA
+
+Country Area: 41,543 sq km
+
+Country Population: 17,084,719
+
+Country GDP: $869.4 billion
+
+Country Year: NA
+
+*
+
+Country Name: Czech Republic
+
+latitude: NA
+
+Longitude: NA
+
+Country Area: NA
+
+Country Population: NA
+
+Country GDP: NA
+
+Country Year: NA
+
+*
+
+Country Name: Belgium
+
+latitude: NA
+
+Longitude: NA
+
+Country Area: 30,528 sq km
+
+Country Population: 11,491,346
+
+Country GDP: $509.5 billion
+
+Country Year: NA
+
+*
+
+Country Name: Austria
+
+latitude: NA
+
+Longitude: NA
+
+Country Area: 83,871 sq km
+
+Country Population: 8,754,413
+
+Country GDP: $417.2 billion
+
+Country Year: NA
+
+*
+
+Country Name: France
+
+latitude: NA
+
+Longitude: NA
+
+Country Area: 643,801 sq km
+
+Country Population: 67,106,161
+
+Country GDP: $2.734 trillion
+
+Country Year: NA
+
+*
+
+Country Name: Switzerland
+
+latitude: NA
+
+Longitude: NA
+
+Country Area: 41,277 sq km
+
+Country Population: 8,236,303
+
+Country GDP: $496 billion
+
+Country Year: NA
