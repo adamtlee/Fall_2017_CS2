@@ -8,6 +8,8 @@ public class HW2 {
     String input_file, output_file;
 
 
+
+
     HW2 object = new HW2();
 
     System.out.print("Enter a text file: ");
@@ -17,8 +19,23 @@ public class HW2 {
     Scanner reader = new Scanner(input_data_file);
 
     while (reader.hasNextLine()){
-      String txt = reader.nextLine();
-      System.out.println(txt);
+      try  {
+        String txt = reader.nextLine();
+        Countries c = new Countries();
+        String[] values = txt.split(",");
+        c.countryName = values[0].trim();
+        c.latitude = values[1];
+        c.longitude = values [2];
+        c.countryArea = Integer.parseInt(values[3]);
+        c.countryPopulation =  Integer.parseInt(values[4]);
+        c.countryGDP = Double.parseDouble(values[5]);
+        c.countryYear = Integer.parseInt(values[6]);
+        // TODO: add c to a list of countries
+        System.out.println(txt);
+      } catch(Exception e){
+        System.out.println("Error parsing file");
+        e.printStackTrace();
+      }
     }
     object.promptUser();
     System.out.println(input_data_file);
