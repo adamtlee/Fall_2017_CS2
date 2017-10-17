@@ -24,12 +24,12 @@ public class HW2 {
         Countries c = new Countries();
         String[] values = txt.split(",");
         c.countryName = values[0].trim();
-        c.latitude = values[1];
-        c.longitude = values [2];
-        c.countryArea = Integer.parseInt(values[3]);
-        c.countryPopulation =  Integer.parseInt(values[4]);
-        c.countryGDP = Double.parseDouble(values[5]);
-        c.countryYear = Integer.parseInt(values[6]);
+        c.latitude = values[1].trim();
+        c.longitude = values [2].trim();
+        c.countryArea = Integer.parseInt(values[3].trim());
+        c.countryPopulation =  Integer.parseInt(values[4].trim());
+        c.countryGDP = Double.parseDouble(values[5].trim());
+        c.countryYear = Integer.parseInt(values[6].trim());
         // TODO: add c to a list of countries
         System.out.println(txt);
       } catch(Exception e){
