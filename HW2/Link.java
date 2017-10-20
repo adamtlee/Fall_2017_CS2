@@ -7,7 +7,6 @@ public class Link<DataType> {
     // Reference the private DataType data instead of the one in scope
     public Link (DataType data) { this.data = data; }
 
-
     public Link (DataType data, Link next){
         // Call the Constructor Passing in data
         this(data);
@@ -25,5 +24,5 @@ public class Link<DataType> {
 
     // get the Next Node
     public Link getNext() { return next; }
-    }
+
 }
