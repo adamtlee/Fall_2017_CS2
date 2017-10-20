@@ -7,9 +7,6 @@ public class HW2 {
     Scanner user_input = new Scanner(System.in);
     String input_file, output_file;
 
-
-
-
     HW2 object = new HW2();
 
     System.out.print("Enter a text file: ");
@@ -17,6 +14,9 @@ public class HW2 {
     String input = user_input.nextLine().trim();
     File input_data_file = new File(input);
     Scanner reader = new Scanner(input_data_file);
+
+    String[] countryArray = new String[];
+
 
     while (reader.hasNextLine()){
       try  {
@@ -30,6 +30,7 @@ public class HW2 {
         c.countryPopulation =  Integer.parseInt(values[4].trim());
         c.countryGDP = Double.parseDouble(values[5].trim());
         c.countryYear = Integer.parseInt(values[6].trim());
+
         // TODO: add c to a list of countries
         System.out.println(txt);
       } catch(Exception e){

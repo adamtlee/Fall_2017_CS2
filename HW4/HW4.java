@@ -7,6 +7,9 @@ public class HW4 {
     Scanner user_input = new Scanner(System.in);
     String input_file, output_file;
 
+    long start, finish, time;
+    start = System.nanoTime();
+
     System.out.print("Enter a text file: ");
     System.out.flush();
     String input = user_input.nextLine().trim();
