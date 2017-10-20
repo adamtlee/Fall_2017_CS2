@@ -15,9 +15,6 @@ public class HW2 {
     File input_data_file = new File(input);
     Scanner reader = new Scanner(input_data_file);
 
-    String[] countryArray = new String[];
-
-
     while (reader.hasNextLine()){
       try  {
         String txt = reader.nextLine();

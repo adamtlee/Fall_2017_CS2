@@ -1,28 +1,37 @@
+import java.util.*;
+
 public class LinkedList<DataType> {
-  private DataType data;
-  private Link next;
+  private Link head;
+  private int size;
 
-  public Link(DataType data){
-    this.data = data;
+  public LinkedList() {
+    this.head = null;
+    this.size = 0;
   }
 
-  public Link(DataType data, Link next){
-    this(data);
-    this.next = next;
+  public DataType get (int n) {
+    Link current = head;
+    while (n > 0 && current != null) {
+      n--;
+      current = current.getNext();
+    }
+    if (current != null && n == 0) return (DataType) current.getData();
+    return null;
   }
+  public DataType add (DataType data) {
+    Link link = new Link(data);
+    size++;
+    if (head == null) {
+      head = link;
+      return;
+    }
+    Link current = head;
+    while (current.getNext() != null) {
+      current = current.getNext();
+    }
+      current.setNext(link);
+    }
 
-  public void setData(DataType data){
-    this.data = data;
-  }
+}
 
-  public DataType getData(){
-    return data;
-  }
 
-  public void setNext(Link){
-    this.next = next;
-  }
-
-  public Link getNext(){
-    return next;
-  }
